@@ -1,0 +1,62 @@
+@import '../common.scss';
+.music_player {
+	position: absolute;
+	bottom: 0;
+	left: $playerSideWidth;
+	right: 0;
+	height: $playerHeight + $playerProgressBarHeight;
+	z-index: 3;
+	transition: all 0.5s;
+	.music_player_progress_bar {
+		width: 100%;
+		height: $playerProgressBarHeight;
+		input[type='range'] {
+			width: 100%;
+			height: 2px;
+		}
+	}
+	.music_player_tools {
+		display: flex;
+		align-items: center;
+		padding: 0 50px;
+		justify-content: space-between;
+		.music_player_left {
+			display: flex;
+			align-items: center;
+			.music_player_img {
+				margin-right: 14px;
+			}
+			.music_player_info {
+				width: 200px;
+			}
+		}
+		.music_player_controller {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			.music_player_controller_btn {
+				display: flex;
+				width: 200px;
+				height: 100%;
+				justify-content: space-between;
+				align-items: center;
+				.iconfont {
+					font-size: 40px;
+					line-height: $playerHeight;
+				}
+				.music_player_controller_btn_mode {
+					.iconfont {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		.music_player_right {
+			width: 200px;
+		}
+	}
+}
+
+.music_player_drawer {
+	left: 0;
+}

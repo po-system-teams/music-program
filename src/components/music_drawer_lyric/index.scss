@@ -1,0 +1,105 @@
+@import '../common.scss';
+.music_program_drawer {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	// background-color: #fff;
+	z-index: 2;
+	transition: top 0.5s;
+	// background-image: linear-gradient(25deg, #4120cb, #9352ad, #c1848b, #e4b762);
+	.drawer_bg_img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(5px);
+		filter: blur(5px);
+		z-index: -1;
+	}
+	.drawer_lyric_header {
+		width: 100%;
+		height: $playerHeaderHeight;
+		position: relative;
+		.close_btn {
+			position: absolute;
+			right: 24px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 2;
+			.iconfont {
+				font-size: 30px;
+			}
+		}
+	}
+	.drawer_lyric_main {
+		display: flex;
+		height: calc(100% - $playerHeaderHeight);
+		.vinyl {
+			flex: 1;
+			.vinyl_box {
+				width: 300px;
+				height: 300px;
+				position: relative;
+				top: 20%;
+				left: 50%;
+				transform: translateX(-50%);
+				.vinyl_bg {
+					width: 300px;
+					height: 300px;
+				}
+				.vinyl_album {
+					width: 100px;
+					height: 100px;
+					border-radius: 50%;
+					position: absolute;
+					top: 118px;
+					left: 83px;
+					animation: rotate 10s infinite linear;
+				}
+			}
+		}
+		.info {
+			flex: 1;
+			font-size: 24px;
+			overflow: hidden;
+			.info_detail {
+				.detail_artists {
+					span:first-child {
+						margin-right: 30px;
+					}
+				}
+			}
+			.lyric_content {
+				height: 70%;
+				overflow-y: auto;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+			.lyric_text_active {
+				color: green;
+				font-size: 26px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+.show_drawer_lyric {
+	top: 0;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

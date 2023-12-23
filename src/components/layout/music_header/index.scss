@@ -1,0 +1,53 @@
+@import "../../common.scss";
+.music_program_custom_header {
+	width: 100%;
+	height: $playerHeaderHeight;
+	display: flex;
+	align-items: center;
+	padding: 0 24px;
+	.music_program_custom_header_left {
+		.music_search_box {
+			width: 230px;
+			height: 30px;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			transition: width 0.3s;
+			border-radius: 30px;
+			// 毛玻璃
+			background-color: rgba(255, 255, 255, 0.6);
+			backdrop-filter: blur(30px);
+			-webkit-backdrop-filter: blur(30px);
+			border: 1px solid rgba(255, 255, 255, 0.18);
+			box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+			-webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+			color: rgb(255, 255, 255);
+			z-index: 9;
+			.icon-sousuo {
+				font-size: 30px;
+			}
+			.music_search {
+				width: 200px;
+				height: 30px;
+				border: 0; /*清除自带的2px的边框*/
+				padding-right: 24px; /*清除自带的padding间距*/
+				outline: none; /*清除input点击之后的黑色边框*/
+				color: var(--vt-c-tools-system-font-color);
+				background: none;
+				::-webkit-input-placeholder {
+					color: rgb(129, 138, 130);
+				}
+				&::before {
+					content: "&#xe67c";
+					display: inline-block;
+				}
+			}
+		}
+		.hover_music_search_box {
+			width: 30px;
+			&:hover {
+				width: 230px;
+			}
+		}
+	}
+}

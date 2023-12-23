@@ -1,0 +1,59 @@
+@import './base.css';
+
+html,
+body,
+#app {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: var(--vt-c-tools-system-font-color);
+}
+
+a,
+.green {
+	text-decoration: none;
+	color: hsla(160, 100%, 37%, 1);
+	transition: 0.4s;
+}
+
+.desabled-copy {
+	-webkit-user-select: none;
+}
+
+.desabled-drag {
+	-webkit-user-drag: none;
+	-moz-user-drag: none;
+	-ms-user-drag: none;
+	user-drag: none;
+}
+
+.program_content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+input {
+	border: 0; /*清除自带的2px的边框*/
+	padding: 0; /*清除自带的padding间距*/
+	outline: none; /*清除input点击之后的黑色边框*/
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.music_program {
+	width: 100%;
+	height: 100%;
+}
